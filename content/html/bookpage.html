@@ -1,0 +1,53 @@
+
+      <div class="hero-card" id="booking">
+        <h2 style="margin-top:0">Book an inspection or reserve the hall</h2>
+        <p class="muted">Fill the form below and we'll hold your requested slot for 24 hours.</p>
+
+        <form id="bookingForm">
+          <div class="row">
+            <div class="field"><label for="name">Full name</label><input id="name" type="text" required placeholder="Jane Doe"></div>
+            <div class="field"><label for="email">Email</label><input id="email" type="email" required placeholder="jane@email.com"></div>
+          </div>
+
+          <div class="row">
+            <div class="field"><label for="date">Event date</label><input id="date" type="date" required></div>
+            <div class="field"><label for="time">Start time</label><input id="time" type="time" required></div>
+          </div>
+
+          <div class="row">
+            <div class="field"><label for="guests">Guests</label>
+              <select id="guests">
+                <option value="50">Up to 50</option>
+                <option value="100">Up to 100</option>
+                <option value="200">Up to 200</option>
+                <option value="300">Up to 300</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Package</label>
+              <div class="packages" id="packages">
+                <div class="package active" data-value="basic">Basic</div>
+                <div class="package" data-value="pro">Pro</div>
+                <div class="package" data-value="premium">Premium</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field"><label for="notes">Additional notes</label><textarea id="notes" placeholder="Any special requests (AV, menu, etc.)"></textarea></div>
+
+          <div style="display:flex;gap:.5rem;align-items:center;margin-top:.5rem">
+            <button class="btn" type="submit">Request booking</button>
+            <div class="muted" style="font-size:.85rem">No payment required to request</div>
+          </div>
+        </form>
+
+        <div class="availability" style="margin-top:1rem">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <strong>Existing requests</strong>
+            <button id="clearStorage" class="muted" style="background:none;border:0;cursor:pointer">Clear</button>
+          </div>
+          <div class="bookings-list" id="bookingsList">
+            <!-- JS will render pending bookings here -->
+          </div>
+        </div>
+      </div>

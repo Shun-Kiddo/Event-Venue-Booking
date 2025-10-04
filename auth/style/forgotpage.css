@@ -1,0 +1,174 @@
+
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;}
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px; 
+  /*background: 
+    linear-gradient(rgba(0, 83, 116, 0.5), rgba(0, 83, 116, 0.5)), 
+    url('/image/beach.webp') no-repeat center center/cover;
+  */
+}
+.form-box {
+  width: 500px;              
+  min-height: 400px;          
+  background:  #fff;
+  padding: 50px;             
+  border-radius: 15px;       
+  box-shadow: 0 6px 30px rgba(2, 6, 23, 0.08);
+  animation: slideIn 1s ease-in-out;
+  display: flex;             
+  flex-direction: column;     
+  justify-content: center;    
+  color: #fff; 
+  margin-left: 50px;
+}
+
+.logo{
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+}
+
+.login-account-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.login-account-sub-title{
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color:#2b2a2aad;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #000000;
+}
+
+input[type="email"]{
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;   
+  background: linear-gradient(135deg,#0066ff,#7c3aed);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover { 
+  transform: scale(1.03); 
+}
+
+.small-text { 
+  font-size: 1rem; 
+  text-align: center; 
+  margin-top: 15px; 
+  color: #111111; 
+}
+.small-text a {
+  color: #001aff;
+  text-decoration: none; 
+}
+
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.otp-box {
+  width: 50px;
+  height: 55px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000000;
+  outline: 2px solid #000000;
+}
+
+.otp-box:focus {
+  outline: 2px solid #b171fa;
+}
+.otp-box::placeholder {
+  color: #999;
+  font-size: 1.5rem;
+}
+.resend-btn {
+  margin-top: 10px;
+  background: transparent;
+  color: #5FADE5;
+  border: 2px solid #5FADE5;
+  transition: 0.3s;
+}
+
+.resend-btn:hover {
+  background: #5FADE5;
+  color: #fff;
+}
+
+/* Responsive (mobile view stacked) */
+@media(max-width: 750px) {
+  body {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .form-box {
+    width: 95%;
+    min-height: auto;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-box h2 { 
+    font-size: 1.5rem; 
+  }
+  label { 
+    font-size: 1rem; 
+  }
+  input[type="email"], input[type="password"] {
+     font-size: 1rem; padding: 12px; 
+  }
+  button { 
+    font-size: 1.1rem; 
+    padding: 12px; 
+  }
+  .small-text, .checkbox-container { 
+    font-size: 0.95rem; 
+  }
+  /* Hide right text in mobile */
+  .right-side-text { display: none; }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Sign in - Event Venue Booking</title>
+  <link rel="stylesheet" href="/auth/style/authstyle.css">
+  <link rel="icon" type="image/png" href="/img/logo.png">
+</head>
+<body>
+  <div class="auth-container">
+    <form id="loginForm">
+        <img src="/img/logo.png" alt="Logo" class="logo">
+        <h2>Event Venue Booking  </h2>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <i class="fa-solid fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+        </div>
+        
+        <div class="checkbox-container">
+          <label>
+            <input type="checkbox"> Remember Me
+          </label>
+          <a class="forgot"href="/auth/html/forgotpage.html">Forgot Password?</a>
+        </div>
+
+          <button type="submit" id="submit">Sign In</button>
+          <p class="small-text">Don't have an account? | <a href="/auth/html/signup.html">Sign up</a></p>
+       
+  </div>
+  <script src="/auth/script/loginpage.js"> </script>
+</body>
+</html>

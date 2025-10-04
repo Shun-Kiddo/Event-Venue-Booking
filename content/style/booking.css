@@ -1,0 +1,17 @@
+    /* Booking form */
+    form .field{display:flex;flex-direction:column;margin-bottom:.85rem}
+    label{font-size:.875rem;color:#0f172a;margin-bottom:.35rem}
+    input[type=text],input[type=email],input[type=date],input[type=time],select,textarea{padding:.6rem .75rem;border:1px solid #e6e9ef;border-radius:8px;font-size:.95rem}
+    textarea{min-height:110px;resize:vertical}
+    .row{display:flex;gap:.75rem}
+    .row .field{flex:1}
+    .btn{display:inline-block;padding:.7rem 1rem;border-radius:10px;background:var(--accent);color:white;border:0;font-weight:600;cursor:pointer}
+    .muted{color:var(--muted);font-size:.9rem}
+    .packages{display:flex;gap:.5rem;margin:0.5rem 0}
+    .package{flex:1;padding:.6rem;border-radius:8px;border:1px solid #e6e9ef;text-align:center;cursor:pointer}
+    .package.active{border-color:var(--accent);box-shadow:0 6px 18px rgba(3,102,255,0.12)}
+
+    /* availability */
+    .availability{margin-top:1rem;background:#fff;padding:1rem;border-radius:10px;border:1px dashed #e6e9ef}
+    .bookings-list{margin-top:.5rem}
+    .booking-item{padding:.6rem;border-radius:8px;border:1px solid #f1f5f9;margin-bottom:.5rem;font-size:.9rem}
