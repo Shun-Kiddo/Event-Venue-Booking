@@ -25,7 +25,7 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME
 });
 
-// Configure Gmail transporter
+// Gmail Configuration
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -89,7 +89,7 @@ app.post("/login", (req, res) => {
   });
 });
 
-// forgot-password
+//FORGOT PASSWORD - generate and send OTP
 app.post('/forgot', (req, res) => {
   console.log("Request body:", req.body);
 
@@ -127,7 +127,7 @@ app.post('/forgot', (req, res) => {
 });
 
 
-// verify-otp
+// VERIFY OTP
 app.post('/verify-otp', (req, res) => {
   const { email, otp } = req.body;
 
@@ -157,7 +157,7 @@ app.post('/verify-otp', (req, res) => {
   });
 });
 
-// Reset Password
+// RESET PASSWORD
 app.post("/reset-password", (req, res) => {
   console.log("RESET BODY:", req.body);
   const { email, newPassword } = req.body;
@@ -180,7 +180,7 @@ app.post("/reset-password", (req, res) => {
 
 
 
-// Start server
+// START SERVER
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
