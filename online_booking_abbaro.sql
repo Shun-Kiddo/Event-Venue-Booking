@@ -1,0 +1,15 @@
+create database OEVB;
+use OEVB;
+CREATE TABLE customer(
+  c_id INT AUTO_INCREMENT PRIMARY KEY,
+  c_fullname VARCHAR(100) NOT NULL,
+  c_email VARCHAR(100) UNIQUE NOT NULL,
+  c_password VARCHAR(255) NOT NULL,
+  c_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE customer
+ADD COLUMN otp VARCHAR(6) NULL,
+ADD COLUMN otp_expiry DATETIME NULL;
+
+SELECT * FROM  customer;
